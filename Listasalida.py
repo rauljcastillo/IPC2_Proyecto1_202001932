@@ -10,7 +10,7 @@ class Nodo:
         self.n1=n1
         self.siguiente=None
         
-class Listasalida:
+class Listasalida: #Esta lista almacena el diagnostico de un paciente
     cantidad=0
     def __init__(self) -> None:
         self.primero=None

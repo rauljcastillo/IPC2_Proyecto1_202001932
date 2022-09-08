@@ -7,7 +7,7 @@ class Nodo:
         self.siguiente = siguiente
 
 
-class ListaDoble:
+class ListaDoble: #Esta es la lista principal donde se cargaran las celulas contagiadas
     def __init__(self,tamanio):
         self.cabeza = None
         self.tamanio=tamanio
@@ -34,13 +34,3 @@ class ListaDoble:
 
     def eliminarLista(self):
         self.cabeza= None
-    def imprimir(self):
-        actual=self.cabeza
-        cont=0
-        while actual!= None:
-            cont+=1
-            print(actual.cont, end="   ")
-            if cont==10:
-                print("\n")
-                cont=0
-            actual=actual.siguiente

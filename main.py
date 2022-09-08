@@ -28,7 +28,8 @@ def cargararchivo():
             if opcion==1 or opcion<=cantidad:
                 tercermenu(opcion)
 
-
+            if opcion==cantidad+1:
+                archivo.crearArchivo()
 
 
 def tercermenu(numero):
@@ -54,7 +55,9 @@ def tercermenu(numero):
                 archivo.cargar(numero)
                 paso=True
             archivo.generarimg(numero)
-        if op=="4":
+
+        if op=="4": 
+            archivo.diagnostico()
             archivo.reiniciar()
             paso=False
 

@@ -21,11 +21,6 @@ class DatosP:
             actual=actual.siguiente
         actual.siguiente=Nodo(indice,nombre,edad,period,tam,rejilla)
 
-    def print(self):
-        actual=self.primero
-        while actual != None:
-            print(actual.nombre, end=" => ")
-            actual=actual.siguiente
     def eliminar(self):
         self.primero=None
     

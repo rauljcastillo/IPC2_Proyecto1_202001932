@@ -13,18 +13,14 @@ class ListaAlmacenar:
         if self.primero is None:
             self.primero=Nodo(numper,period)
             return
-        if not self.repetido:
-            actual=self.primero
-            while actual.siguiente != None and actual.dato!=period:
-                actual=actual.siguiente
-            if actual.dato==period:
-                print("El periodo ya existe")
-                self.repetido=True
-                return numper-actual.numper
-            actual.siguiente=Nodo(numper,period)
-
-        else:
-            print("Ya no se pueden agregar")
+        
+        actual=self.primero
+        while actual.siguiente != None and actual.dato!=period:
+            actual=actual.siguiente
+        if actual.dato==period:
+            print("El periodo ya existe")
+            return numper-actual.numper
+        actual.siguiente=Nodo(numper,period)
 
     def print(self):
         actual=self.primero
